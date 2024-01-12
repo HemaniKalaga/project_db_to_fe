@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <center><h1>Displaying Books</h1>
+    <table border="3px">
+        <tr><th>Book_id</th>
+            <th>Author_id</th>
+            <th>Book_name</th>
+            <th>Book_price</th>
+
+        </tr>
+        {% for bo in books %}
+        <tr>
+            <td style="text-align: center;">{{ bo.book_id }}</td>
+            <td style="text-align: center;">{{ bo.author_id }}</td>
+            <td>{{ bo.book_name }}</td>
+            <td style="text-align: center;">{{ bo.book_price }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+</center>
+
+
+</body>
+</html>

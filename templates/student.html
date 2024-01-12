@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+<body>
+    <center><h1>Displaying Students</h1>
+    <table border="3px">
+        <tr><th>Stu_name</th>
+            <th >Stu_rank</th>
+            <th>Stu_class</th>
+            <th>Book_id</th>
+            <th>Date</th>
+        </tr>
+        {% for so in students %}
+        <tr>
+            <td>{{ so.stu_name }}</td>
+            <td style="text-align: center;">{{ so.stu_rank }}</td>
+            <td>{{ so.stu_class }}</td>
+            <td>{{ so.book_id }}</td>
+            <td>{{ so.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+</body>
+</html>

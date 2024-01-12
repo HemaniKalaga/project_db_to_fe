@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ALL HTML PAGESt</title>
+    <style>
+        div:hover
+        {
+            font-size: 25px;
+            color: rgb(218, 112, 36);
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        table:hover
+        {
+            background-color: wheat;
+            box-shadow: 0 0 5px black;
+            color: rgb(243, 46, 79);
+        }
+        .one
+        {
+            margin-top: 10px;
+        }
+        th
+        {
+            background-color: black;
+            color: antiquewhite;
+        }
+        td:hover
+        {
+            color: rgb(107, 67, 251);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="one">
+            <center><h1><u>Displaying Authors</u></h1>
+                <table border="3px">
+                    <tr><th>Author_id</th>
+                        <th>Author_name</th>
+                        <th>Author_age</th>
+                        <th>Author_exp</th>
+                    </tr>
+                    {% for ao in authors %}
+                    <tr>
+                        <td style="text-align: center;">{{ ao.author_id }}</td>
+                        <td>{{ ao.author_name }}</td>
+                        <td style="text-align: center;">{{ ao.author_age }}</td>
+                        <td style="text-align: center;">{{ ao.author_exp }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+        </div>
+        <div class="one">
+            <center><h1><u>Displaying Books</u></h1>
+                <table border="3px">
+                    <tr><th>Book_id</th>
+                        <th>Author_id</th>
+                        <th>Book_name</th>
+                        <th>Book_price</th>
+            
+                    </tr>
+                    {% for bo in books %}
+                    <tr>
+                        <td style="text-align: center;">{{ bo.book_id }}</td>
+                        <td style="text-align: center;">{{ bo.author_id }}</td>
+                        <td>{{ bo.book_name }}</td>
+                        <td style="text-align: center;">{{ bo.book_price }}</td>
+            
+                    </tr>
+                    {% endfor %}
+                </table>
+        </div>
+        <div class="one">
+            <h1><u>Displaying Students</u></h1>
+            <table border="3px">
+                <tr><th>Stu_name</th>
+                    <th >Stu_rank</th>
+                    <th>Stu_class</th>
+                    <th>Book_id</th>
+                </tr>
+                {% for so in students %}
+                <tr>
+                    <td>{{ so.stu_name }}</td>
+                    <td style="text-align: center;">{{ so.stu_rank }}</td>
+                    <td>{{ so.stu_class }}</td>
+                    <td>{{ so.book_id }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </center>
+</body>
+</html>
